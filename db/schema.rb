@@ -26,37 +26,21 @@ ActiveRecord::Schema.define(version: 2018_07_26_220429) do
   create_table "comments", force: :cascade do |t|
     t.text "text"
     t.integer "user_id"
-    t.integer "custom_word_id"
+    t.integer "word_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "custom_definitions", force: :cascade do |t|
-    t.integer "wordnik_api_id"
+  create_table "definitions", force: :cascade do |t|
+    t.integer "word_id"
     t.integer "user_id"
     t.text "definition"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "custom_word_votes", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "custom_word_id"
-    t.integer "value"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "custom_words", force: :cascade do |t|
-    t.string "word"
-    t.text "definition"
-    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "tag_words", force: :cascade do |t|
-    t.integer "custom_word_id"
+    t.integer "word_id"
     t.integer "tag_id"
     t.integer "user_id"
     t.datetime "created_at", null: false
@@ -74,6 +58,23 @@ ActiveRecord::Schema.define(version: 2018_07_26_220429) do
     t.string "last_name"
     t.string "email"
     t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "word_votes", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "word_id"
+    t.integer "value"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "words", force: :cascade do |t|
+    t.string "wordnik_api_id"
+    t.string "word"
+    t.text "definition"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

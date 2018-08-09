@@ -1,4 +1,6 @@
 class Tag < ApplicationRecord
+  validates :name, presence: true
+
   has_many :tag_words
-  has_many :custom_words, through: :tag_words
+  has_many :words, through: :tag_words
 end
