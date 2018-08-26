@@ -2,4 +2,5 @@
 json.id @word.id
 json.word @word.word
 json.definition @word.definition
+json.example @word.example
 json.user_id @word.user_id

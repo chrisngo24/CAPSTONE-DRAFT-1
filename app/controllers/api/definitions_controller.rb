@@ -14,4 +14,4 @@ class Api::DefinitionsController < ApplicationController
   end
 end
 
-# DO I NEED MORE DEFINITION FUNCTIONALITY HERE?
+# DO I NEED MORE DEFINITION   FUNCTIONALITY HERE?

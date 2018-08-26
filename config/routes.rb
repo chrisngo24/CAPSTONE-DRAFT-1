@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     post "/users" => "users#create"
     post "/sessions" => "sessions#create"
 
-    get "/words/:id" => "words#show"
+    get "/words" => "words#index"
     post "/words" => "words#create"
     post "/definitions" => "definitions#create"
     post "/tags" => "tags#create"
