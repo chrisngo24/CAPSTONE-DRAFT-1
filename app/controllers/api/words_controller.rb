@@ -8,7 +8,8 @@ class Api::WordsController < ApplicationController
       @words = @words.where("word ILIKE ?", "%" + search_terms + "%")
     end
 
-    # @word = Word.find_by(id: params[:id])
+    @wordnik_words = []
+    # @wordnik_words = Unirest.get("")
     render "index.json.jbuilder"
   end
 
