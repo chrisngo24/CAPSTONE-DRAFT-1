@@ -11,5 +11,7 @@ Rails.application.routes.draw do
     post "/tags" => "tags#create"
     post "/tag_words" => "tag_words#create"
     post "/comments" => "comments#create"
+
+    get "/wordnik" => "words#wordnik"
   end
 end

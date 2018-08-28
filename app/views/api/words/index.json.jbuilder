@@ -6,4 +6,3 @@ json.custom_words @words.each do | word |
   json.example word.example
   json.user_id word.user_id
 end
-json.wordnik_words @wordnik_words

@@ -25,6 +25,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'jwt'
 gem 'figaro'
 gem 'rack-cors', require: 'rack/cors'
+gem 'unirest'
 
 
 # Use ActiveStorage variant
