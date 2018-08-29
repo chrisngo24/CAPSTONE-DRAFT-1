@@ -6,6 +6,7 @@ class Api::DefinitionsController < ApplicationController
       definition: params[:definition],
       user_id: current_user.id
     )
+
     if @definition.save
       render "show.json.jbuilder"
     else

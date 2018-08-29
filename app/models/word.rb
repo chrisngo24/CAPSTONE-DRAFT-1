@@ -6,4 +6,5 @@ class Word < ApplicationRecord
   has_many :word_votes
   has_many :tag_words
   has_many :tags, through: :tag_words
+  has_many :definitions
 end
