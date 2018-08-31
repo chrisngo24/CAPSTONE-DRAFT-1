@@ -1,5 +1,5 @@
 class Api::WordsController < ApplicationController
-  require 'unirest'
+  # require 'unirest'
 
   def index
     @words = Word.all
@@ -46,6 +46,11 @@ class Api::WordsController < ApplicationController
       user_id: current_user.id
     )
     if @word.save
+      params[:tags].each do |tag_name|
+        tag_name = tag_name.downcase
+        tag = Tag.find_or_create_by(name: tag_name)
+        TagWord.create(word_id: @word.id, tag_id: tag.id, user_id: current_user.id)
+      end
       render "show.json.jbuilder"
     else
       render json: {errors: @word.errors.full_messages}, status: :bad_request

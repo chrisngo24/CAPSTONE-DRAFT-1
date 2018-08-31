@@ -8,7 +8,9 @@ Rails.application.routes.draw do
     get "/words" => "words#index"
     post "/words" => "words#create"
     post "/definitions" => "definitions#create"
+    get "/tags" => "tags#index"
     post "/tags" => "tags#create"
+    get "tag_words" => "tag_words#index"
     post "/tag_words" => "tag_words#create"
     post "/comments" => "comments#create"
 

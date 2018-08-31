@@ -14,5 +14,3 @@ class Api::DefinitionsController < ApplicationController
     end
   end
 end
-
-# DO I NEED MORE DEFINITION   FUNCTIONALITY HERE?
